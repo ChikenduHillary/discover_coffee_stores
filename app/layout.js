@@ -1,5 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,6 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel='preload' href='/fonts/IBMplexSans-Bold.ttf' as='font' crossOrigin='anonymous'></link>
+        <link rel='preload' href='/fonts/IBMplexSans-Regular.ttf' as='font' crossOrigin='anonymous'></link>
+        <link rel='preload' href='/fonts/IBMplexSans-SemiBold.ttf' as='font' crossOrigin='anonymous'></link>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
